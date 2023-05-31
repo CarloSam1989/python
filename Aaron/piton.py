@@ -1,13 +1,14 @@
 print("Presentar la cantidad N de la serie fibonachi")
 def fibonacci_iterativo(posicion, debe_imprimir):
-    actual = 0
+    actual = 1
     siguiente = 1
-    for x in range(posicion):
-        if debe_imprimir:
-            print(str(actual) + ", ", end="")
+    print("0, 1", end="")
+    for x in range((posicion-2)):
         temporal = actual
         actual = siguiente
         siguiente = siguiente + temporal
+        if debe_imprimir:
+            print(",", str(actual), end="")
     return temporal
 
 
