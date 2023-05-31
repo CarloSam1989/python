@@ -3,7 +3,7 @@ def fibonacci_iterativo(posicion, debe_imprimir):
     actual = 1
     siguiente = 1
     print("0, 1", end="")
-    for x in range((posicion-1)):
+    for x in range((posicion-2)):
         temporal = actual
         actual = siguiente
         siguiente = siguiente + temporal
