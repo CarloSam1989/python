@@ -31,7 +31,7 @@ def multiplicar(*numeros):
 
 def dividir(*numeros):
     if 0 in numeros[1:]:
-        print("Error: No se puede dividir entre cero.")
+        print(" No se puede dividir entre cero.")
     else:
         resultado = numeros[0]
         for num in numeros[1:]:
