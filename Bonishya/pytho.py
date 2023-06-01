@@ -49,23 +49,23 @@ while menu != 5:
     if menu == 1:
         print("| Suma                      |")
         resultado = suma()
-        print("La suma de los datos es:", resultado)
+        print("| La suma de los datos es:", resultado)
         print("-----------------------------")
     elif menu ==2:
         print("| Resta                     |")
         resultado = resta()
-        print("La resta de los datos es:", resultado)
+        print("| La resta de los datos es:", resultado)
         print("-----------------------------")
     elif menu ==3:
         print("| Multiplicar               |")
         resultado_multiplicacion = multiplicacion()
-        print("La multiplicacion de los datos es:",resultado_multiplicacion)
+        print("| La multiplicacion de los datos es:",resultado_multiplicacion)
         print("-----------------------------")
     elif menu ==4:
         print("| Dividir                   |")
         resultado_division = division()
         if resultado_division is not None:
-            print("La resta de los datos es:",resultado_division)
+            print("| La resta de los datos es:",resultado_division)
             print("-----------------------------")
     elif menu ==5:
         print("| Saliendo del Sistema...   |")
