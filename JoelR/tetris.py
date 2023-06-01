@@ -297,16 +297,12 @@ def new_block():
             'x': GRID_WIDTH // 2 - 2,
             'y': 0
         }
-
-
 def game_over():
     # Comprobar si el juego ha terminado
     for x in range(GRID_WIDTH):
         if grid[0][x] is not None:
             return True
     return False
-
-
 # Bucle principal del juego
 last_fall_time = pygame.time.get_ticks()
 while True:
@@ -326,7 +322,6 @@ while True:
             elif event.key == K_UP and can_rotate(current_block):
                 current_block['rotation'] = (
                     current_block['rotation'] + 1) % len(SHAPES[current_block['shape']])
-
     # Mover el bloque actual hacia abajo
     if pygame.time.get_ticks() - last_fall_time > FALL_FREQUENCY * 1000:
         if can_move(current_block, 0, 1):
