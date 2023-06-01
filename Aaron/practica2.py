@@ -1,3 +1,9 @@
+import time
+from datetime import date
+today = date.today()
+print(today.strftime("%d/%m/%y"))
+
+
 import math
 valor = int(input("Ingrese un valor para calcular el factorial: "))
 
