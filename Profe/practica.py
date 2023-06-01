@@ -1,5 +1,4 @@
-def setvalores(**parametro):
-    print(parametro["nombre"],  parametro["id"])
-
-
-setvalores(id="15638", valor="5", nombre="Hyundai")
+import math
+valor = int(input("Ingrese un valor para calcular el factorial: "))
+factos = math.factorial(valor)
+print("el factorial de {} es: {}".format(valor, factos))
