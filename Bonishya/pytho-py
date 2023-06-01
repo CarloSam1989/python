@@ -1,37 +1,38 @@
 def suma():
     total_datos = int(input("Ingresa el total de datos a sumar: "))
-    suma = 0   
-    for i in range(total_datos):
+    suma = float(input("Ingrese el primer dato: "))
+    for i in range(1, total_datos):
         dato = float(input(f"Ingrese el dato #{i + 1}: "))
-        suma += dato
+        suma = suma + dato
     return suma
+
 def resta():
     total_datos = int(input("Ingresa el total de datos a restar: "))
-    resta = 0   
-    for i in range(total_datos):
+    resta = float(input("Ingrese el primer dato: "))
+    for i in range(1, total_datos):
         dato = float(input(f"Ingrese el dato #{i + 1}: "))
-        resta -= dato
+        resta = resta - dato
     return resta
-def multiplicar():
-    total_datos = int(input("Ingresa el total de datos a multiplicar: "))
-    multiplicar = 0   
-    for i in range(total_datos):
-        dato = float(input(f"Ingrese el dato #{i + 1}: "))
-        multiplicar *= dato
-    return multiplicar
-def division ():
-    validar = False
-    while validar != True:     
-        a = int(input("Ingrese primer numero: "))
-        b = int(input("Ingrese segundo numero: "))
-        if a > 0 and b >0:
-            division_resul = a/b
-            validar = True
-        
-        else:
-            print("No se puede dividir para 0!!!")
-    return division_resul
 
+def multiplicacion():
+    total_datos = int(input("Ingresa el total de datos a multiplicar: "))
+    producto = float(input("Ingrese el primer dato: "))
+    for i in range(1, total_datos):
+        dato = float(input(f"Ingrese el dato #{i + 1}: "))
+        producto = producto * dato
+    return producto
+
+def division():
+    total_datos = int(input("Ingresa el total de datos a dividir: "))
+    resultado = float(input("Ingrese el primer dato: "))
+    for i in range(1, total_datos):
+        dato = float(input(f"Ingrese el dato #{i + 1}: "))
+        if dato != 0:
+            resultado = resultado / dato
+        else:
+            print("Error: No se puede dividir entre cero.")
+            return None
+    return resultado
 
 
 menu = 0
@@ -54,12 +55,14 @@ while menu != 5:
         print("La resta de los datos es:", resultado)
     elif menu ==3:
         print("MULTIPLICACION")  
-        resultado = multiplicar()
-        print("La multiplicacion de los datos es:", resultado)  
+        resultado_multiplicacion = multiplicacion()
+        print(resultado_multiplicacion)
     elif menu ==4:
         print("DIVISION")
-        resultado = division()
-        print("La division de los datos es:", resultado)  
+        resultado_division = division()
+        if resultado_division is not None:
+            print(resultado_division)
+
     elif menu ==5:
         print("Saliendo del Sistema...")
     else:
