@@ -62,8 +62,7 @@ while menu != 5:
         resultado_division = division()
         if resultado_division is not None:
             print(resultado_division)
-
     elif menu ==5:
         print("Saliendo del Sistema...")
     else:
-        "ERROR! opcion no validad pendeje"
+        "ERROR! opcion no valida"
