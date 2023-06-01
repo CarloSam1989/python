@@ -39,7 +39,7 @@ def dividir(*numeros):
         return resultado
 
 while True:
-    print("Calculadora básica")
+    print("Calculadora z ")
     print("---------1. Sumar-------------")
     print("---------2. Restar------------")
     print("---------3. Multiplicar-------")
