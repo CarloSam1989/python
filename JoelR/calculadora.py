@@ -1,26 +1,21 @@
-from datetime import datetime, date
-
-actual = datetime.now()
 
 
-def sumar(a, b):
-    return a + b
+def sumar(*valor):
+    return sum(valor)
+
+def restar(a, *valores):
+    return a - sum(valores)
 
 
-def restar(a, b):
-    return a - b
-
-
-def multiplicar(a, b):
-    return a * b
+def multiplicar(*valores):
+    result = 1
+    for valor in valores:
+        result *= valor
+    return result
 
 
 def residuo(a, b):
     return a % b
-
-
-def division(a, b):
-    return a / b
 
 
 def cociente(a, b):
@@ -33,7 +28,6 @@ def potencia(a, b):
 
 def edad(a, b):
     return a - b
-
 
 while True:
     print("------------------")
@@ -66,7 +60,7 @@ while True:
                 break
             except ValueError:
                 print("Error: Ingrese un número entero mayor o igual a 2.")
-        
+
         valores = []
         for i in range(num_valores):
             while True:
@@ -77,7 +71,7 @@ while True:
                 except ValueError:
                     print("Error: Ingrese un número entero.")
 
-        result = sum(valores)
+        result = sumar(*valores)
         print("------------------")
         print("Su resultado es:", result)
         print("------------------")
@@ -91,7 +85,7 @@ while True:
                 break
             except ValueError:
                 print("Error: Ingrese un número entero mayor o igual a 2.")
-        
+
         valores = []
         for i in range(num_valores):
             while True:
@@ -102,7 +96,7 @@ while True:
                 except ValueError:
                     print("Error: Ingrese un número entero.")
 
-        result = restar(valores[0], sum(valores[1:]))
+        result = restar(valores[0], *valores[1:])
         print("Su resultado es:", result)
     elif operador == 3:
         print("------División------")
@@ -114,7 +108,7 @@ while True:
                 break
             except ValueError:
                 print("Error: Ingrese un número entero igual a 2.")
-        
+
         valores = []
         for i in range(num_valores):
             while True:
@@ -126,7 +120,7 @@ while True:
                     print("Error: Ingrese un número entero.")
 
         if valores[1] != 0:
-            result = division(valores[0], valores[1])
+            result = residuo(valores[0], valores[1])
             print("Su resultado es:", result)
         else:
             print("Error: No se puede dividir por cero")
@@ -140,7 +134,7 @@ while True:
                 break
             except ValueError:
                 print("Error: Ingrese un número entero mayor o igual a 2.")
-        
+
         valores = []
         for i in range(num_valores):
             while True:
@@ -151,7 +145,7 @@ while True:
                 except ValueError:
                     print("Error: Ingrese un número entero.")
 
-        result = multiplicar(valores)
+        result = multiplicar(*valores)
         print("Su resultado es:", result)
     elif operador == 5:
         print("------Residuo------")
@@ -163,7 +157,7 @@ while True:
                 break
             except ValueError:
                 print("Error: Ingrese un número entero igual a 2.")
-        
+
         valores = []
         for i in range(num_valores):
             while True:
@@ -186,7 +180,7 @@ while True:
                 break
             except ValueError:
                 print("Error: Ingrese un número entero igual a 2.")
-        
+
         valores = []
         for i in range(num_valores):
             while True:
@@ -209,7 +203,7 @@ while True:
                 break
             except ValueError:
                 print("Error: Ingrese un número entero igual a 2.")
-        
+
         valores = []
         for i in range(num_valores):
             while True:

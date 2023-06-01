@@ -49,7 +49,8 @@ while True:
     opcion = input("Ingrese una opción: ")
     if opcion == "1":
         cantidad = int(input("Ingrese la cantidad de números a sumar: "))
-        numeros = [float(input("Ingrese un número {}: ".format(i+1))) for i in range(cantidad)]
+        numeros = [float(input("Ingrese un número {}: ".format(i+1))) 
+                   for i in range(cantidad)]
         print("El resultado es:", sumar(*numeros))
     elif opcion == "2":
         cantidad = int(input("Ingrese la cantidad de números a restar: "))
