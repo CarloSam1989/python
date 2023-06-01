@@ -16,7 +16,6 @@ for i in range (0 ,n):
     
 
 
-
 #saber si numero es par  o impar 
 var = int(input('Ingrese un numero:'))
 if var % 2==0 :
@@ -33,3 +32,7 @@ var2= int(input("Ingrese el segundo numero:"))
 var3= int(input("Ingrese el tercer numero:"))
 Mostrar = nummayor(var,var2,var3)
 print("el numero es mayor" , Mostrar)
+#funciones
+def setvalores(**parametro):
+    print(parametro["nombre"],parametro["id"])
+setvalores(nombre="Juan",valor="5",id=5)
