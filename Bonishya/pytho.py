@@ -37,32 +37,39 @@ def division():
 
 menu = 0
 while menu != 5: 
-    print("==========CALCULADORA==========")
-    print("|[1] Sumar                    |")
-    print("|[2] Restar                   |")
-    print("|[3] Multiplicar              |")
-    print("|[4] Dividir                  |")
-    print("|[5] Salir                    |")
-    print("===============================")
+    print("------------Menu-------------")
+    print("| 1° Sumar                  |")
+    print("| 2° Restar                 |")
+    print("| 3° Multiplicar            |")
+    print("| 4° Dividir                |")
+    print("| 5° Salir                  |")
+    print("-----------------------------")
     menu = int(input("Ingrese una Opcion: "))
+    print("-----------------------------")
     if menu == 1:
-        print("SUMA")
+        print("| Suma                      |")
         resultado = suma()
         print("La suma de los datos es:", resultado)
+        print("-----------------------------")
     elif menu ==2:
-        print("RESTA")
+        print("| Resta                     |")
         resultado = resta()
         print("La resta de los datos es:", resultado)
+        print("-----------------------------")
     elif menu ==3:
-        print("MULTIPLICACION")  
+        print("| Multiplicar               |")
         resultado_multiplicacion = multiplicacion()
         print(resultado_multiplicacion)
+        print("-----------------------------")
     elif menu ==4:
-        print("DIVISION")
+        print("| Dividir                   |")
         resultado_division = division()
         if resultado_division is not None:
             print(resultado_division)
+            print("-----------------------------")
     elif menu ==5:
-        print("Saliendo del Sistema...")
+        print("| Saliendo del Sistema...   |")
+        print("-----------------------------")
     else:
-        "ERROR! opcion no valida"
+        print("| ERROR! opcion no valida   |")
+        print("-----------------------------")
