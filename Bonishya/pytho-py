@@ -1,84 +1,66 @@
+def suma():
+    total_datos = int(input("Ingresa el total de datos a sumar: "))
+    suma = 0   
+    for i in range(total_datos):
+        dato = float(input(f"Ingrese el dato #{i + 1}: "))
+        suma += dato
+    return suma
 def resta():
     total_datos = int(input("Ingresa el total de datos a restar: "))
-    resta = float(input("Ingrese el primer dato: "))
-    for i in range(1, total_datos):
+    resta = 0   
+    for i in range(total_datos):
         dato = float(input(f"Ingrese el dato #{i + 1}: "))
-        resta = resta - dato
+        resta -= dato
     return resta
-
-def suma():
-    total_datos = int(input("ingresa el total de datos a suma: "))
-    suma =0
-    for i in range(total_datos):
-        dato =float(input(f"ingrese el dato #{i + 1}:"))
-        suma == dato
-    return suma
-
 def multiplicar():
-    total_datos = int(input("ingresa el total de datos a suma: "))
-    multiplicar =0
+    total_datos = int(input("Ingresa el total de datos a multiplicar: "))
+    multiplicar = 0   
     for i in range(total_datos):
-        dato =float(input(f"ingrese el dato #{i * 1}:"))
-        multiplicar == dato
+        dato = float(input(f"Ingrese el dato #{i + 1}: "))
+        multiplicar *= dato
     return multiplicar
-
-def multiplicar():
-    total_datos = int(input("ingresa el total de datos a suma: "))
-    multiplicar =0
-    for i in range(total_datos):
-        dato =float(input(f"ingrese el dato #{i * 1}:"))
-        multiplicar == dato
-    return multiplicar
-
-menu=0
-while menu !=5:
-    print("------------Menu-------------")
-    print("| 1° Sumar                  |")
-    print("| 2° Restar                 |")
-    print("| 3° Multiplicar            |")
-    print("| 4° Dividir                |")
-    print("| 5° Mayor edad             |")
-    print("| 6° Saber si son iguales   |")
-    print("| 7° Salir                  |")
-    print("| 8° Regresar Menu          |")
-    print("-----------------------------")
-
-    menu = int(input("| Seleccione una opcion: "))
-    print("-----------------------------")
-
-    if menu == 1:
-        print("| Suma                      |")
-        resultado = suma()
-        print("| La sumatoria es: ", resultado)
-        print("-----------------------------")
-
-    if menu == 2:
-        print("| Resta                     |")
-        resultado_resta = resta()
-        print(resultado_resta)
-        print("-----------------------------")
-
-    if menu == 3:
-        print("| Multiplicar               |")
-        resultado = multiplicar()
-        print("| La sumatoria es: ", resultado)
-        print("-----------------------------")
-
-    if menu == 4:
-        print("| Dividir                   |")
-        Val1 = int(input("| Ingrese el 1° Valor: "))
-        Val2 = int(input("| Ingrese el 2° Valor: "))
-        print("| La division es: ", Val1/Val2,"      |")
-        print("-----------------------------")
-
-    if menu == 5:
-        print("| Mayor de Edad             |")
-        b= 65
-        edad = int(input("Ingrese su edad "))
-        if edad >= 18 and b <= 64:
-            print("| Es Mayor de Edad          |")
-        elif edad > b:
-            print("| Es Mayor de Edad y Viejo  |")
+def division ():
+    validar = False
+    while validar != True:     
+        a = int(input("Ingrese primer numero: "))
+        b = int(input("Ingrese segundo numero: "))
+        if a > 0 and b >0:
+            division_resul = a/b
+            validar = True
+        
         else:
-            print("|Es Menor de Edad           |")
-        print("-----------------------------")
+            print("No se puede dividir para 0!!!")
+    return division_resul
+
+
+
+menu = 0
+while menu != 5: 
+    print("==========CALCULADORA==========")
+    print("|[1] Sumar                    |")
+    print("|[2] Restar                   |")
+    print("|[3] Multiplicar              |")
+    print("|[4] Dividir                  |")
+    print("|[5] Salir                    |")
+    print("===============================")
+    menu = int(input("Ingrese una Opcion: "))
+    if menu == 1:
+        print("SUMA")
+        resultado = suma()
+        print("La suma de los datos es:", resultado)
+    elif menu ==2:
+        print("RESTA")
+        resultado = resta()
+        print("La resta de los datos es:", resultado)
+    elif menu ==3:
+        print("MULTIPLICACION")  
+        resultado = multiplicar()
+        print("La multiplicacion de los datos es:", resultado)  
+    elif menu ==4:
+        print("DIVISION")
+        resultado = division()
+        print("La division de los datos es:", resultado)  
+    elif menu ==5:
+        print("Saliendo del Sistema...")
+    else:
+        "ERROR! opcion no validad pendeje"
