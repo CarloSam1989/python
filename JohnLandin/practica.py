@@ -6,7 +6,7 @@
 
 setvalores(id="15638", valor="5", nombre="john landin")"""
 
-import math
+"""import math
 valor = int(input("ingrese un valor para calcular el factorial: "))
 factos = math.factorial(valor)
-print("el factorial de {} es {}".format(valor, factos))
+print("el factorial de {} es {}".format(valor, factos))"""
