@@ -1,5 +1,6 @@
 from colorama import Fore,Back,Style 
 #Presentar la Cantidad n de la serie de Fibonacci
+'''
 def fibonacci(n):
     if n <= 0:
         print("El valor de 'n' debe ser un número entero positivo.")
@@ -36,3 +37,37 @@ print('El numero mayor es ',Designado)
 print(Fore.GREEN+'3-Ejercicio de Fibonacci'+Fore.RESET)
 nanox = int(input('Ingrese un numero entero positivo: '))
 fibonacci(nanox)
+'''
+def datePeople(**parametro):
+    print(parametro["nombre"],parametro ['id'], parametro['valor'])
+
+datePeople(id='1223' ,valor='20$', nombre='RedmiNote7')
+
+mensaje = 'Tener una influencia'
+for numero in range(0,5):
+    print(numero)
+
+
+def suma_parametros(*autentic):
+    resultado = 0
+    for num in autentic:
+        resultado += num
+    return resultado
+
+
+def ingreso_paremetros():
+    parametro = []
+    while True:
+        ingreso = input('Ingrese el parametro',{+1},'(enter con valor vacio para finalizar)')
+        if ingreso =="":
+            break
+        try:
+            parametro = int(ingreso)
+            parametros.append(parametro)
+        except ValueError :
+            print("¡Error! Ingrese valor numerico valido")
+    return parametro
+
+parametros = ingreso_paremetros()
+resultado = suma_parametros(*parametros)
+
