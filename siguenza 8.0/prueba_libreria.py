@@ -7,14 +7,16 @@ def suma():
     return suma
 def resta():
     total_datos = int(input("Ingresa el total de datos a restar: "))
-    resta = 0   
     for i in range(total_datos):
-        dato = float(input(f"Ingrese el dato #{i + 1}: "))
+        resta = 0 
+        dato = float(input(f"Ingrese el dato #{i + 1}: ")) 
         resta -= dato
+       
+
     return resta
 def multiplicar():
     total_datos = int(input("Ingresa el total de datos a multiplicar: "))
-    multiplicar = 0   
+    multiplicar = 1   
     for i in range(total_datos):
         dato = float(input(f"Ingrese el dato #{i + 1}: "))
         multiplicar *= dato
