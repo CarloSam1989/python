@@ -39,7 +39,7 @@ def dividir(*numeros):
         return resultado
 
 while True:
-    print("Calculadora z ")
+    print("Calculadora Z ")
     print("---------1. Sumar-------------")
     print("---------2. Restar------------")
     print("---------3. Multiplicar-------")
@@ -49,24 +49,24 @@ while True:
     opcion = input("Ingrese una opción: ")
     if opcion == "1":
         cantidad = int(input("Ingrese la cantidad de números a sumar: "))
-        numeros = [float(input("Ingrese el número {}: ".format(i+1))) for i in range(cantidad)]
+        numeros = [float(input("Ingrese un número {}: ".format(i+1))) for i in range(cantidad)]
         print("El resultado es:", sumar(*numeros))
     elif opcion == "2":
         cantidad = int(input("Ingrese la cantidad de números a restar: "))
-        numeros = [float(input("Ingrese el número {}: ".format(i+1))) for i in range(cantidad)]
+        numeros = [float(input("Ingrese un número {}: ".format(i+1))) for i in range(cantidad)]
         print("El resultado es:", restar(*numeros))
     elif opcion == "3":
         cantidad = int(input("Ingrese la cantidad de números a multiplicar: "))
-        numeros = [float(input("Ingrese el número {}: ".format(i+1))) for i in range(cantidad)]
+        numeros = [float(input("Ingrese un número {}: ".format(i+1))) for i in range(cantidad)]
         print("El resultado es:", multiplicar(*numeros))
     elif opcion == "4":
         cantidad = int(input("Ingrese la cantidad de números a dividir: "))
-        numeros = [float(input("Ingrese el número {}: ".format(i+1))) for i in range(cantidad)]
+        numeros = [float(input("Ingrese un número {}: ".format(i+1))) for i in range(cantidad)]
         resultado = dividir(*numeros)
         if resultado:
             print("El resultado es:", resultado)
     elif opcion == "5":
-        print("¡Hasta luego!")
+        print("¡Adiós vaquero :v!")
         break
     else:
         print("Opción inválida. Por favor, ingrese una opción válida.")
