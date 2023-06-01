@@ -35,5 +35,4 @@ print("el numero es mayor" , Mostrar)
 #funciones
 def setvalores(**parametro):
     print(parametro["nombre"],parametro["id"])
-
 setvalores(nombre="Juan",valor="5",id=5)
