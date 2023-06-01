@@ -122,28 +122,24 @@ Selec = int(input("| Seleccione una opcion: "))
 print("-----------------------------")
 
 if Selec == 1:
-    print("| Opcion 1                  |")
-    def fibonacci
-    (n):
-        fib = [0, 1]  # Lista para almacenar la serie de Fibonacci
+    #presenttar la cantidad de n de la serie de fibonanci
+    def fibonacci(n):
+        num1 = 0
+        num2 = 1
+        nums = [num1, num2]
+        for i in range(2, n):
+            next_num = num1 + num2
+            nums.append(next_num)
+            num1 = num2
+            num2 = next_num
+        return nums
+    n = int(input("Ingresar el numero maximo de fibonanci: "))
+    serie = fibonacci(n)
 
-        # Generar la serie de Fibonacci hasta el número n
-        while len(fib) < n:
-            next_num = fib[-1] + fib[-2]  # Sumar los últimos dos números de la serie
-            fib.append(next_num)
 
-        return fib
-
-    # Solicitar al usuario el número n
-    n = int(input("Ingrese el número n para generar la serie de Fibonacci: "))
-
-    # Obtener la serie de Fibonacci hasta n
-    serie_fibonacci = fibonacci(n)
-
-    # Imprimir la serie de Fibonacci
-    print("Serie de Fibonacci hasta el número", n, ":")
-    for num in serie_fibonacci:
-        print(num)
+    # Mostrar la serie de Fibonacci
+    print(f"Serie de Fibonacci con {n} números:")
+    print(serie)
     print("-----------------------------")
 
 if Selec == 2:
@@ -169,3 +165,7 @@ if Selec == 3:
     if opc1 < 3 and opc2 <3:
         print("| Ambos son menores         |")
     print("-----------------------------")
+
+
+##
+
