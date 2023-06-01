@@ -60,12 +60,24 @@ while True:
         print("------Suma------")
         while True:
             try:
-                numero1 = int(input("Ingrese el primer número: "))
-                numero2 = int(input("Ingrese el segundo número: "))
+                num_valores = int(input("Ingrese la cantidad de números que desea sumar: "))
+                if num_valores < 2:
+                    raise ValueError
                 break
             except ValueError:
-                print("Error: Ingrese números enteros.")
-        result = sumar(numero1, numero2)
+                print("Error: Ingrese un número entero mayor o igual a 2.")
+        
+        valores = []
+        for i in range(num_valores):
+            while True:
+                try:
+                    valor = int(input(f"Ingrese el número {i + 1}: "))
+                    valores.append(valor)
+                    break
+                except ValueError:
+                    print("Error: Ingrese un número entero.")
+
+        result = sum(valores)
         print("------------------")
         print("Su resultado es:", result)
         print("------------------")
@@ -73,73 +85,145 @@ while True:
         print("------Resta------")
         while True:
             try:
-                numero1 = int(input("Ingrese el primer número: "))
-                numero2 = int(input("Ingrese el segundo número: "))
+                num_valores = int(input("Ingrese la cantidad de números que desea restar: "))
+                if num_valores < 2:
+                    raise ValueError
                 break
             except ValueError:
-                print("Error: Ingrese números enteros.")
-        result = restar(numero1, numero2)
+                print("Error: Ingrese un número entero mayor o igual a 2.")
+        
+        valores = []
+        for i in range(num_valores):
+            while True:
+                try:
+                    valor = int(input(f"Ingrese el número {i + 1}: "))
+                    valores.append(valor)
+                    break
+                except ValueError:
+                    print("Error: Ingrese un número entero.")
+
+        result = restar(valores[0], sum(valores[1:]))
         print("Su resultado es:", result)
     elif operador == 3:
-        print("------Division------")
+        print("------División------")
         while True:
             try:
-                numero1 = int(input("Ingrese el primer número: "))
-                numero2 = int(input("Ingrese el segundo número: "))
+                num_valores = int(input("Ingrese la cantidad de números para la división: "))
+                if num_valores != 2:
+                    raise ValueError
                 break
             except ValueError:
-                print("Error: Ingrese números enteros.")
-        if numero2 != 0:
-            result = division(numero1, numero2)
+                print("Error: Ingrese un número entero igual a 2.")
+        
+        valores = []
+        for i in range(num_valores):
+            while True:
+                try:
+                    valor = int(input(f"Ingrese el número {i + 1}: "))
+                    valores.append(valor)
+                    break
+                except ValueError:
+                    print("Error: Ingrese un número entero.")
+
+        if valores[1] != 0:
+            result = division(valores[0], valores[1])
             print("Su resultado es:", result)
         else:
             print("Error: No se puede dividir por cero")
     elif operador == 4:
-        print("------Multiplicacion------")
+        print("------Multiplicación------")
         while True:
             try:
-                numero1 = int(input("Ingrese el primer número: "))
-                numero2 = int(input("Ingrese el segundo número: "))
+                num_valores = int(input("Ingrese la cantidad de números que desea multiplicar: "))
+                if num_valores < 2:
+                    raise ValueError
                 break
             except ValueError:
-                print("Error: Ingrese números enteros.")
-        result = multiplicar(numero1, numero2)
+                print("Error: Ingrese un número entero mayor o igual a 2.")
+        
+        valores = []
+        for i in range(num_valores):
+            while True:
+                try:
+                    valor = int(input(f"Ingrese el número {i + 1}: "))
+                    valores.append(valor)
+                    break
+                except ValueError:
+                    print("Error: Ingrese un número entero.")
+
+        result = multiplicar(valores)
         print("Su resultado es:", result)
     elif operador == 5:
         print("------Residuo------")
         while True:
             try:
-                numero1 = int(input("Ingrese el primer número: "))
-                numero2 = int(input("Ingrese el segundo número: "))
+                num_valores = int(input("Ingrese la cantidad de números para el cálculo del residuo: "))
+                if num_valores != 2:
+                    raise ValueError
                 break
             except ValueError:
-                print("Error: Ingrese números enteros.")
-        result = residuo(numero1, numero2)
+                print("Error: Ingrese un número entero igual a 2.")
+        
+        valores = []
+        for i in range(num_valores):
+            while True:
+                try:
+                    valor = int(input(f"Ingrese el número {i + 1}: "))
+                    valores.append(valor)
+                    break
+                except ValueError:
+                    print("Error: Ingrese un número entero.")
+
+        result = residuo(valores[0], valores[1])
         print("Su resultado es:", result)
     elif operador == 6:
         print("------Cociente------")
         while True:
             try:
-                numero1 = int(input("Ingrese el primer número: "))
-                numero2 = int(input("Ingrese el segundo número: "))
+                num_valores = int(input("Ingrese la cantidad de números para el cálculo del cociente: "))
+                if num_valores != 2:
+                    raise ValueError
                 break
             except ValueError:
-                print("Error: Ingrese números enteros.")
-        result = cociente(numero1, numero2)
+                print("Error: Ingrese un número entero igual a 2.")
+        
+        valores = []
+        for i in range(num_valores):
+            while True:
+                try:
+                    valor = int(input(f"Ingrese el número {i + 1}: "))
+                    valores.append(valor)
+                    break
+                except ValueError:
+                    print("Error: Ingrese un número entero.")
+
+        result = cociente(valores[0], valores[1])
         print("Su resultado es:", result)
     elif operador == 7:
         print("------Potencia------")
         while True:
             try:
-                numero1 = int(input("Ingrese un número: "))
-                numero2 = int(input("Ingrese el exponente: "))
+                num_valores = int(input("Ingrese la cantidad de números para el cálculo de la potencia: "))
+                if num_valores != 2:
+                    raise ValueError
                 break
             except ValueError:
-                print("Error: Ingrese números enteros.")
-        result = potencia(numero1, numero2)
+                print("Error: Ingrese un número entero igual a 2.")
+        
+        valores = []
+        for i in range(num_valores):
+            while True:
+                try:
+                    valor = int(input(f"Ingrese el número {i + 1}: "))
+                    valores.append(valor)
+                    break
+                except ValueError:
+                    print("Error: Ingrese un número entero.")
+
+        result = potencia(valores[0], valores[1])
         print("Su resultado es:", result)
     elif operador == 8:
-        print("------CALCULAR EDAD------")
+        print("------Calcular Edad------")
         while True:
             try:
                 numero1 = int(input("Ingrese el año de nacimiento: "))
@@ -150,9 +234,9 @@ while True:
         result = edad(numero1, numero2)
         print("Su edad es:", result, " años")
     elif operador == 9:
-        print("------BUSQUEDA ENTRE ARREGLOS------")
-        perifericos = {"mouse", "audifonos", "teclado", "monitor"}
-        palabra = input("Ingrese palabra a buscar: ")
+        print("------Búsqueda entre arreglos------")
+        perifericos = {"mouse", "audífonos", "teclado", "monitor"}
+        palabra = input("Ingrese la palabra a buscar: ")
         busqueda = [s for s in perifericos if palabra in s]
         print(busqueda)
     elif operador == 10:
