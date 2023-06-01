@@ -2,8 +2,19 @@ import pygame
 from pygame.locals import *
 import random
 
+
 # Inicializar Pygame
 pygame.init()
+
+# Initialize the mixer
+pygame.mixer.init()
+
+# Load the music file
+pygame.mixer.music.load('tetris.mp3')
+
+# Play the music
+pygame.mixer.music.play(-1)
+# Inicializar Pygame
 
 # Definir colores
 WHITE = (255, 255, 255)
@@ -19,11 +30,11 @@ YELLOW = (155, 155, 0)
 LIGHTYELLOW = (175, 175, 20)
 
 # Definir dimensiones de la pantalla
-SCREEN_WIDTH = 640
-SCREEN_HEIGHT = 480
+SCREEN_WIDTH = 700
+SCREEN_HEIGHT = 600
 
 # Definir dimensiones de la cuadrícula
-GRID_WIDTH = 10
+GRID_WIDTH = 28
 GRID_HEIGHT = 20
 
 # Definir tamaño de los bloques
@@ -351,8 +362,8 @@ text_rect.centery = screen.get_rect().centery
 screen.blit(text, text_rect)
 pygame.display.update()
 
-current_block = None
-next_block = None
+# current_block = None
+# next_block = None
 
 # Crear el primer bloque
 new_block()
