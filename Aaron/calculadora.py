@@ -1,3 +1,7 @@
+def suma(*numero):
+    parametro = None
+    resultado = numero + parametro
+    return resultado
 salir = True
 while salir:
     print("\n1) Sumar")
