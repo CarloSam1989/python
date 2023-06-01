@@ -12,3 +12,4 @@ fecha_nacimiento = fecha_nacimiento.date()
 edad = fecha_actual - fecha_nacimiento
 print( "la edad de {} es: {}".format(fecha_nacimiento, edad))
 
+#Calculadora 
