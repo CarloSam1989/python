@@ -154,8 +154,18 @@ pygame.display.set_caption('Tetris')
 grid = [[None for _ in range(GRID_WIDTH)] for _ in range(GRID_HEIGHT)]
 
 # Crear el bloque actual y el siguiente
-current_block = None
-next_block = None
+current_block = {
+    'shape': random.choice(list(SHAPES.keys())),
+    'rotation': 0,
+    'x': GRID_WIDTH // 2 - 2,
+    'y': 0
+}
+next_block = {
+    'shape': random.choice(list(SHAPES.keys())),
+    'rotation': 0,
+    'x': GRID_WIDTH // 2 - 2,
+    'y': 0
+}
 # Crear el reloj
 clock = pygame.time.Clock()
 
