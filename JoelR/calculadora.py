@@ -29,7 +29,6 @@ def potencia(a, b):
 def edad(a, b):
     return a - b
 
-
 while True:
     print("------------------")
     print("-----MENU----")
