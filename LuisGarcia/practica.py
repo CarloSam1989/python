@@ -49,14 +49,17 @@ while   True:
         cantidad = int(input('Ingrese una cantidad numeros a sumar :'))
         num =   [float(input("El numero que ingrese {}: ".format(i + 1))) for i in range(cantidad)]
         print("Su resultado es: ",sumar(*num))
+        
     elif op ==  "2":
         cantidad = int(input('Ingrese una cantidad numeros a restar :'))
         num =   [float(input("El numero que ingrese {}: ".format(i + 1))) for i in range(cantidad)]
         print("Su resultado es: ",restar(*num))
+
     elif op == "3":
         cantidad = int(input('Ingrese una cantidad numeros a multiplicar :'))
         num =   [float(input("El numero que ingrese {}: ".format(i + 1))) for i in range(cantidad)]
         print("Su resultado es: ", multiplicar(*num))
+
     elif op == "4":
         cantidad = int(input('Ingrese una cantidad numeros a dividir :'))
         num =   [float(input("El numero que ingrese {}: ".format(i + 1))) for i in range(cantidad)]
