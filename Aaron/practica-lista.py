@@ -26,11 +26,13 @@ while salir:
     elif int(opcion) == 4:  # eliminar 1
         eliminar = input("INGRESE EL NOMBRE A ELIMINAR: ")
         for x in listado:
+            no = True
             if x == eliminar:
                 listado.remove(eliminar)
                 print("NOMBRE ELIMINADO CORRECTAMENTE")
+                no = False
                 break
-            else:
+            elif no == True:
                 print("ESE NOMBRE A ELIMINAR NO ESTÁ EN LA LISTA")
     elif int(opcion) == 5:  # eliminar toda la lista
         SoN = input("¿ESTÁ SEGURO DE QUIERE TODA LA LISTA? (S/N): ")
