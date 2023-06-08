@@ -11,6 +11,7 @@ pygame.mixer.init()
 # Load the music file
 pygame.mixer.music.load('tetris.mp3')
 
+
 # Play the music
 pygame.mixer.music.play(-1)
 
@@ -39,10 +40,10 @@ GRID_WIDTH = 10
 GRID_HEIGHT = 20
 
 # Definir tamaño de los bloques
-BLOCK_SIZE = 30
+BLOCK_SIZE = 25
 
 # Definir velocidad de caída de los bloques
-FALL_FREQUENCY = 1
+FALL_FREQUENCY = 2
 
 # Definir formas de los bloques
 SHAPES = {
@@ -255,11 +256,12 @@ while running:
                 if is_valid_position(current_block, current_block['x'], current_block['y'] + 1):
                     current_block['y'] += 1
             elif event.key == K_UP:
-                if is_valid_position(current_block, current_block['x'], current_block['y'], current_block['rotation'] + 1):
+                if is_valid_position(current_block, current_block['x'], current_block['y']):
                     current_block['rotation'] = (current_block['rotation'] + 1) % len(SHAPES[current_block['shape']])
             elif event.key == K_SPACE:
                 while is_valid_position(current_block, current_block['x'], current_block['y'] + 1):
                     current_block['y'] += 1
+
 
     # Actualizar la posición del bloque
     fall_counter += 1
@@ -300,7 +302,7 @@ while running:
     pygame.display.update()
 
     # Controlar la velocidad del juego
-    clock.tick(30)
+    clock.tick(10)
 
 # Mostrar la puntuación final
 final_score_text = pygame.font.Font(None, 50).render("Final Score: " + str(score), True, WHITE)

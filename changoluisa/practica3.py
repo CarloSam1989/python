@@ -14,7 +14,6 @@ print(arreglo)1
 
 
 estudiantes = []
-
 def agregar_estudiante():
     while True:
         try:
@@ -24,7 +23,6 @@ def agregar_estudiante():
             break
         except:
             print("Error al agregar estudiante. Intente nuevamente.")
-
 def ingresar_nota():
     while True:
         try:
@@ -35,23 +33,19 @@ def ingresar_nota():
                 if estudiante["nombre"] == nombre:
                     estudiante["nota"] = nota
                     print("Nota ingresada correctamente.")
-                    return
-            
+                    return      
             print("Estudiante no encontrado.")
             break
         except:
             print("Error al ingresar la nota. Intente nuevamente.")
-
 def mostrar_estudiantes():
     print("Lista de estudiantes:")
     for estudiante in estudiantes:
         print("Nombre:", estudiante["nombre"], "Nota:", estudiante["nota"])
-
 def eliminar_estudiante():
     while True:
         try:
-            nombre = input("Ingrese el nombre del estudiante a eliminar: ")
-            
+            nombre = input("Ingrese el nombre del estudiante a eliminar: ")   
             for estudiante in estudiantes:
                 if estudiante["nombre"] == nombre:
                     estudiantes.remove(estudiante)
@@ -62,7 +56,6 @@ def eliminar_estudiante():
             break
         except:
             print("Error al eliminar estudiante. Intente nuevamente.")
-
 while True:
     print("\n----- Menú -----")
     print("1. Reguistrar estudiante")
@@ -70,9 +63,7 @@ while True:
     print("3. Mostrar estudiantes")
     print("4. Eliminar estudiante")
     print("5. Salir")
-    
     opcion = input("Seleccione una opción: ")
-    
     if opcion == "1":
         agregar_estudiante()
     elif opcion == "2":
